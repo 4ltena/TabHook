@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background: #f8f8f8;
+      color: #333;
+    }
+    
+    h1 {
+      font-size: 18px;
+      margin-top: 0;
+      color: #000;
+      font-weight: 600;
+    }
+    
+    .setting-group {
+      margin-bottom: 15px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    
+    input[type="text"], input[type="number"], select {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #007AFF;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    
+    button:hover {
+      background: #0056b3;
+    }
+    
+    .status {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      text-align: center;
+    }
+    
+    .success {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    
+    .error {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+
+    .flex-row {
+      display: flex;
+      gap: 5px;
+    }
+    
+    .flex-row select {
+      flex: 1;
+      height: 35px;
+    }
+    
+    .refresh-button {
+      width: 40px;
+      padding: 0;
+      margin-top: 0;
+      background: #eee;
+      color: #333;
+      border: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    
+    .refresh-button:hover {
+      background: #e0e0e0;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 15px 0 10px;
+    }
+    
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    .divider span {
+      padding: 0 10px;
+      font-size: 12px;
+      color: #999;
+      font-weight: 500;
+    }
+
+    .action-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 5px;
+    }
+
+    .small-button {
+      flex: 1;
+      padding: 6px;
+      font-size: 11px;
+      margin-top: 0;
+      font-weight: normal;
+      cursor: pointer;
+      border: 1px solid #ddd;
+    }
+
+    #reset_tracking, #unload_model:enabled {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+    
+    #unload_model:disabled {
+      background: #6c757d;
+      color: white;
+      border: none;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title_text">TabHook Settings</h1>
+  
+  <div class="setting-group">
+    <label for="api_mode" id="api_mode_label">AI Mode</label>
+    <select id="api_mode">
+      <option value="public">Public Models</option>
+      <option value="local">Local LLM</option>
+    </select>
+  </div>
+
+  <div id="public_settings">
+    <div class="setting-group">
+      <label for="api_provider" id="provider_label">API Provider</label>
+      <select id="api_provider">
+        <option value="openai">OpenAI</option>
+        <option value="claude">Claude</option>
+        <option value="gemini">Gemini</option>
+      </select>
+    </div>
+    
+    <div class="setting-group">
+      <label for="api_key" id="key_label">API Key</label>
+      <input type="text" id="api_key" placeholder="Enter your API key">
+    </div>
+  </div>
+
+  <div id="local_settings" style="display: none;">
+    <div class="setting-group">
+      <label for="local_type" id="local_type_label">Local LLM Type</label>
+      <select id="local_type">
+        <option value="wsl_ollama">WSL + Ollama</option>
+      </select>
+    </div>
+
+    <div class="setting-group">
+      <label for="local_port" id="local_port_label">Port Number</label>
+      <input type="number" id="local_port" placeholder="11435">
+    </div>
+
+    <div class="setting-group">
+      <label for="local_model" id="local_model_label">Model Name</label>
+      <div class="flex-row">
+        <select id="local_model"></select>
+        <button id="refresh_models" class="refresh-button">↻</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="setting-group">
+    <label for="timer_duration" id="duration_label">Timer Duration (minutes)</label>
+    <input type="number" id="timer_duration" min="1" max="120" value="10">
+  </div>
+  
+  <button id="save_settings">Save Settings</button>
+  
+  <div class="divider">
+    <span id="management_label">Settings</span>
+  </div>
+
+  <div class="action-row">
+    <button id="reset_tracking" class="small-button">Reset Tracking</button>
+    <button id="unload_model" class="small-button">Release VRAM</button>
+  </div>
+  
+  <div id="status_message" class="status" style="display: none;"></div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

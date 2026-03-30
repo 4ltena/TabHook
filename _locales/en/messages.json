@@ -1,0 +1,130 @@
+{
+  "extName": {
+    "message": "TabHook",
+    "description": "The name of the extension."
+  },
+  "extDescription": {
+    "message": "\"What was that tab about?\" — LLM analyzes your abandoned tabs and delivers intriguing snippets straight to your desktop. Curious?",
+    "description": "Extension description"
+  },
+  "settingsTitle": {
+    "message": "TabHook Settings",
+    "description": "Title of the settings popup."
+  },
+  "apiProviderLabel": {
+    "message": "API Provider",
+    "description": "Label for the API provider dropdown."
+  },
+  "apiKeyLabel": {
+    "message": "API Key",
+    "description": "Label for the API key input."
+  },
+  "apiKeyPlaceholder": {
+    "message": "Enter your API key",
+    "description": "Placeholder for the API key input."
+  },
+  "timerDurationLabel": {
+    "message": "Waiting Time (minutes)",
+    "description": "Label for the timer duration input."
+  },
+  "saveSettingsBtn": {
+    "message": "Save Settings",
+    "description": "Button to save settings."
+  },
+  "resetTrackingBtn": {
+    "message": "Reset Tracking (Clear Storage)",
+    "description": "Button to reset tab tracking data."
+  },
+  "settingsSaved": {
+    "message": "Settings saved successfully!",
+    "description": "Success message when settings are saved."
+  },
+  "resetConfirm": {
+    "message": "Do you want to reset the abandonment time for all tabs?",
+    "description": "Confirmation dialog message for reset."
+  },
+  "resetSuccess": {
+    "message": "Tracking reset successfully!",
+    "description": "Success message when tracking is reset."
+  },
+  "resetFailed": {
+    "message": "Reset failed (connection error).",
+    "description": "Error message when reset fails."
+  },
+  "notificationTitle": {
+    "message": "TabHook: Tab abandoned",
+    "description": "Title of the desktop notification."
+  },
+  "noApiKeyError": {
+    "message": "AI configuration is incomplete. Check API key or Local LLM settings.",
+    "description": "Error message when AI config is missing."
+  },
+  "managementLabel": {
+    "message": "Settings",
+    "description": "Label for the secondary actions section"
+  },
+  "fetchModelsError": {
+    "message": "Failed to fetch models. Check Ollama connection and CORS.",
+    "description": "Error message for Ollama fetch failure"
+  },
+  "fetchModelsSuccess": {
+    "message": "Models fetched successfully.",
+    "description": "Success message for Ollama fetch"
+  },
+  "noModelsFound": {
+    "message": "No models found. Please pull a model first.",
+    "description": "Message when no models are available in Ollama"
+  },
+  "refreshBtn": {
+    "message": "Refresh",
+    "description": "Label for refresh button"
+  },
+  "unloadBtn": {
+    "message": "Release VRAM",
+    "description": "Label for unloading the model from VRAM"
+  },
+  "unloadSuccess": {
+    "message": "VRAM released (model unloaded).",
+    "description": "Success message for VRAM release"
+  },
+  "unloadError": {
+    "message": "Failed to release VRAM.",
+    "description": "Error message for VRAM release failure"
+  },
+  "aiPromptNormal": {
+    "message": "You are a helpful assistant. The user was reading the following content but has abandoned the tab for a while. Generate a short, intriguing summary (max 2 sentences) to capture their curiosity and encourage them to return to the page. CONTENT:",
+    "description": "AI prompt template for normal web pages"
+  },
+  "apiModeLabel": {
+    "message": "AI Mode",
+    "description": "Label for AI Mode selection"
+  },
+  "apiModePublic": {
+    "message": "Public Gemini/OpenAI",
+    "description": "Public AI mode"
+  },
+  "apiModeLocal": {
+    "message": "Local LLM (Ollama)",
+    "description": "Local AI mode"
+  },
+  "localTypeLabel": {
+    "message": "Local LLM Type",
+    "description": "Label for selection of local LLM type"
+  },
+  "localPortLabel": {
+    "message": "Port Number",
+    "description": "Label for local LLM port number"
+  },
+  "localModelLabel": {
+    "message": "Model Name",
+    "description": "Label for local LLM model name selection"
+  },
+  "localModelPlaceholder": {
+    "message": "e.g., llama3",
+    "description": "Placeholder for Local LLM model name"
+  },
+  "aiPromptNewTab": {
+    "message": "You are an excellent assistant who summarizes abandoned tabs to make the user want to read them again. Regarding this tab (like a New Tab page), create a short, catchy, and intriguing summary.\n\nRequirements:\n- No preambles like 'Summarizing content...'.\n- Exactly 3 short bullet points.\n- Catchy expressions to pique curiosity.\n- Total within 150 characters.\n- Start with 'Lost in the digital sea?'.\n\nContent:",
+    "description": "Prompt for the AI to generate summaries (for New Tab pages)."
+  }
+}

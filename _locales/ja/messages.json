@@ -1,0 +1,130 @@
+{
+  "extName": {
+    "message": "TabHook",
+    "description": "拡張機能の名前"
+  },
+  "extDescription": {
+    "message": "「あのタブ、何だったっけ？」——放置されたタブの内容をLLMが分析。あなたの好奇心をそそる断片をデスクトップへ届けます。続き、気になりませんか？",
+    "description": "Extension description"
+  },
+  "settingsTitle": {
+    "message": "TabHook 設定",
+    "description": "設定画面の見出し"
+  },
+  "apiProviderLabel": {
+    "message": "API プロバイダー",
+    "description": "APIプロバイダーのラベル"
+  },
+  "apiKeyLabel": {
+    "message": "API キー",
+    "description": "APIキーのラベル"
+  },
+  "apiKeyPlaceholder": {
+    "message": "APIキーを入力",
+    "description": "APIキーのプレースホルダー"
+  },
+  "timerDurationLabel": {
+    "message": "待機時間 (分)",
+    "description": "タイマー設定のラベル"
+  },
+  "saveSettingsBtn": {
+    "message": "設定を保存",
+    "description": "保存ボタン"
+  },
+  "resetTrackingBtn": {
+    "message": "追跡リセット (初期化)",
+    "description": "リセットボタン"
+  },
+  "settingsSaved": {
+    "message": "設定を保存しました！",
+    "description": "保存成功時のメッセージ"
+  },
+  "resetConfirm": {
+    "message": "全てのタブの放置時間をリセット（初期化）しますか？",
+    "description": "リセット時の確認メッセージ"
+  },
+  "resetSuccess": {
+    "message": "追跡データをリセットしました。",
+    "description": "リセット成功時のメッセージ"
+  },
+  "resetFailed": {
+    "message": "リセットに失敗しました (通信エラー)。",
+    "description": "リセット失敗時のメッセージ"
+  },
+  "notificationTitle": {
+    "message": "TabHook: タブが放置されています",
+    "description": "デスクトップ通知のタイトル"
+  },
+  "noApiKeyError": {
+    "message": "AI設定が不完全です。設定からAPIキーまたはローカルLLMの設定を確認してください。",
+    "description": "Error message when AI config is missing."
+  },
+  "managementLabel": {
+    "message": "設定",
+    "description": "Label for the secondary actions section"
+  },
+  "fetchModelsError": {
+    "message": "モデル取得に失敗。Ollamaの起動とCORS設定を確認してください。",
+    "description": "Error message for Ollama fetch failure"
+  },
+  "fetchModelsSuccess": {
+    "message": "モデルリストを更新しました。",
+    "description": "Success message for Ollama fetch"
+  },
+  "noModelsFound": {
+    "message": "モデルが見つかりません。先にモデルをプルしてください。",
+    "description": "Message when no models are available in Ollama"
+  },
+  "refreshBtn": {
+    "message": "更新",
+    "description": "Label for refresh button"
+  },
+  "unloadBtn": {
+    "message": "VRAM解放",
+    "description": "Label for unloading the model from VRAM"
+  },
+  "unloadSuccess": {
+    "message": "メモリを解放しました（モデルのアンロード完了）。",
+    "description": "Success message for VRAM release"
+  },
+  "unloadError": {
+    "message": "VRAMの解放に失敗しました。",
+    "description": "Error message for VRAM release failure"
+  },
+  "apiModeLabel": {
+    "message": "AIモード",
+    "description": "Label for AI Mode selection"
+  },
+  "apiModePublic": {
+    "message": "公開モデル (Gemini/OpenAI)",
+    "description": "Public AI mode"
+  },
+  "apiModeLocal": {
+    "message": "ローカルLLM (Ollama)",
+    "description": "Local AI mode"
+  },
+  "localTypeLabel": {
+    "message": "ローカルLLMの種類",
+    "description": "Label for selection of local LLM type"
+  },
+  "localPortLabel": {
+    "message": "ポート番号",
+    "description": "Label for local LLM port number"
+  },
+  "localModelLabel": {
+    "message": "使用モデル名",
+    "description": "Label for local LLM model name selection"
+  },
+  "localModelPlaceholder": {
+    "message": "例: llama3, mistral",
+    "description": "Placeholder for Local LLM model name"
+  },
+  "aiPromptNormal": {
+    "message": "あなたは放置されたタブの内容を要約し、ユーザーに再び読みたいと思わせる優秀なアシスタントです。 以下のWebページの内容を読み、興味をそそるような短く魅力的な要約を作成してください。 \n\n【条件】 \n・「要約します」などの前置きは一切不要。 \n・絶対に3つの短い箇条書きのみを出力。 \n・キャッチーな表現を使い、150文字以内で簡潔に。 \n\n内容: ",
+    "description": "AI prompt template for normal web pages"
+  },
+  "aiPromptNewTab": {
+    "message": "あなたは放置されたタブの内容を要約し、ユーザーに再び読みたいと思わせる優秀なアシスタントです。 このタブ（新規タブなど）について、興味をそそるような短く魅力的な要約を作成してください。 \n\n【条件】 \n・「要約します」などの前置きは一切不要。 \n・絶対に3つの短い箇条書きのみを出力。 \n・キャッチーな表現を使い、150文字以内で簡潔に。 \n・冒頭は「デジタルの海で迷子になっていませんか？」で開始。 \n\n内容: ",
+    "description": "Prompt for the AI to generate summaries (for new tabs/system pages)."
+  }
+}
