@@ -3,6 +3,8 @@
 放置されたタブの記憶を呼び起こすChrome拡張機能。
 A Chrome extension that reignites your memory of abandoned tabs.
 
+Version 0.9.5
+
 ---
 
 [日本語](#日本語) | [English](#english)
