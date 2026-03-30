@@ -26,6 +26,9 @@ A Chrome extension that reignites your memory of abandoned tabs.
 3. 放置判定までの時間（分）を設定
 4. 指定時間の旅を終えると、AIがあなたの再訪を促します。
 
+### Chrome Web Store
+現在準備中です…
+
 ---
 
 ## English
@@ -44,6 +47,9 @@ A Chrome extension that reignites your memory of abandoned tabs.
 2. Choose your AI Mode (Public Models or Local LLM)
 3. Set the "Timer Duration" (minutes)
 4. Once the tab completes its journey through time, AI will invite you back.
+
+### Chrome Web Store
+Currently under preparation…
 
 ---
 
