@@ -7,7 +7,8 @@ Version 0.9.5
 
 ---
 
-[日本語](#日本語) | [English](#english)
+[日本語](#日本語)
+[English](#english)
 
 ---
 
@@ -31,6 +32,14 @@ Version 0.9.5
 ### Chrome Web Store
 現在準備中です…
 
+### クレジット / アイコンの出典
+このプロジェクトで使用されているアイコンは、以下のサイトより引用しています。
+- **ICON RAINBOW**: [https://icon-rainbow.com/](https://icon-rainbow.com/)
+
+### ライセンス
+このプロジェクトは **Apache License 2.0** のもとで公開されています。
+詳細は [LICENSE](LICENSE) ファイルをご覧ください。
+
 ---
 
 ## English
@@ -53,17 +62,11 @@ Version 0.9.5
 ### Chrome Web Store
 Currently under preparation…
 
----
-
-## Credits / アイコンの出典
-このプロジェクトで使用されているアイコンは、以下のサイトより引用しています。
+### Credits
 Icons used in this project are provided by:
-
 - **ICON RAINBOW**: [https://icon-rainbow.com/](https://icon-rainbow.com/)
 
----
-
-## License
-このプロジェクトは **Apache License 2.0** のもとで公開されています。
+### License
 This project is licensed under the **Apache License 2.0**.
 See the [LICENSE](LICENSE) file for details.
+
