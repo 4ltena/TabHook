@@ -1,3 +1,9 @@
+![Version](https://img.shields.io/badge/version-0.9.5-blue)
+![License](https://img.shields.io/badge/license-Apache%202.0-green)
+![Platform](https://img.shields.io/badge/platform-Chrome%20Extension-blue?logo=google-chrome&logoColor=white)
+![Language](https://img.shields.io/badge/language-JavaScript-yellow)
+![Language](https://img.shields.io/badge/language-HTML-orange)
+
 # TabHook
 
 放置されたタブの記憶を呼び起こすChrome拡張機能。
