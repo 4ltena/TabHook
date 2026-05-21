@@ -1,8 +1,8 @@
 ![Version](https://img.shields.io/badge/version-0.9.5-blue)
 ![License](https://img.shields.io/badge/license-Apache%202.0-green)
 ![Platform](https://img.shields.io/badge/platform-Chrome%20Extension-blue?logo=google-chrome&logoColor=white)
-![Language](https://img.shields.io/badge/language-JavaScript-yellow)
-![Language](https://img.shields.io/badge/language-HTML-orange)
+![](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![](https://img.shields.io/badge/HTML5_/_CSS3-E34F26?logo=html5&logoColor=white)
 
 # TabHook
 
