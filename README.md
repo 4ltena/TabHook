@@ -6,6 +6,9 @@
 
 # TabHook
 
+※この拡張機能はまだ公開されていません。微調整ののち公開する予定です。
+This extension is not yet publicly available. It will be released after some minor adjustments.
+
 放置されたタブの記憶を呼び起こすChrome拡張機能。
 A Chrome extension that reignites your memory of abandoned tabs.
 
